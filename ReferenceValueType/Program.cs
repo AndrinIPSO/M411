@@ -46,7 +46,8 @@ namespace ReferenceValueType
             zStruct.zahl1 = 200;
             Console.WriteLine($"werttyp kopie{zClass.zahl1}");
 
-
+            double[] zs = new double[111111111];
+            double[] zss = zs;
 
 
             Console.Read();
