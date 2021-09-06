@@ -22,7 +22,6 @@ namespace ReferenceValueType
             z1 = 0;
             change(ref z1);
             Console.WriteLine($"reftyp: z1= {z1}");
-            Console.Read();
 
             //class als referenz typ
             var zClass = new ZahlClass();
@@ -35,6 +34,22 @@ namespace ReferenceValueType
             ZahlClass zClass2 = zClass;
             zClass.zahl1 = 200;
             Console.WriteLine($"reftyp klasse von klasse: z1= {zClass.zahl1}");
+
+            //Struct (werttyp)
+            var zStruct = new ZahlStruct();
+            zStruct.zahl1 = 0;
+            Console.WriteLine($"werttyp struct {zStruct.zahl1}");
+
+            //zuweisung werttyp
+            zStruct.zahl1 = 100;
+            ZahlStruct zStruct2 = zStruct;
+            zStruct.zahl1 = 200;
+            Console.WriteLine($"werttyp kopie{zClass.zahl1}");
+
+
+
+
+            Console.Read();
         }
 
         public static void change(int zahl1)
