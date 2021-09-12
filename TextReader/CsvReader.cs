@@ -8,5 +8,9 @@ namespace TextReader
 {
     class CsvReader
     {
+        public string Load(string filename)
+        {
+            CsvReader
+        }
     }
 }
