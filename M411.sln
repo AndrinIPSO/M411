@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B4", "B4", "{344C8E56-24C9-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenceValueType", "ReferenceValueType\ReferenceValueType.csproj", "{90AAC416-EC39-40BE-A557-D96567D8B087}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextReader", "TextReader\TextReader.csproj", "{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{90AAC416-EC39-40BE-A557-D96567D8B087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90AAC416-EC39-40BE-A557-D96567D8B087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90AAC416-EC39-40BE-A557-D96567D8B087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{90AAC416-EC39-40BE-A557-D96567D8B087} = {E44B5502-AA00-4741-8A31-52DE8A78DDE6}
+		{6634A0BA-8F43-44D7-AB2C-1EDD555BB85C} = {7EF25358-DBCE-46CA-838D-22C2086E83A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85E5773E-E658-4769-8349-17BE2B03F928}
