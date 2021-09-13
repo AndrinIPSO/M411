@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextReader
+namespace LinkedList
 {
-    class CsvReader
+    class Program
     {
-        public string Load(string filename)
+        static void Main(string[] args)
         {
-            return "No error please";
         }
     }
 }
