@@ -12,19 +12,14 @@ namespace LinkedList
         {
             LinkedListSimple listSimple = new LinkedListSimple();
             listSimple.Add("tim");
-            listSimple.Add("muchachodude");
+            listSimple.Add("tom");
             listSimple.Add("vodidude");
             listSimple.Add("dudeldude");
             listSimple.Add("haramdude");
 
-            if (listSimple.contains("tim"))
-            {
-                Console.WriteLine("Yeehaw");
-            }
-            else
-            {
-                Console.WriteLine("waheey");
-            }
+            Console.WriteLine(listSimple.ToString());
+            listSimple.Remove("tom");
+            Console.WriteLine(listSimple.ToString());
 
             Console.ReadLine();
 
