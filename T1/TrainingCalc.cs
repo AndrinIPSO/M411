@@ -22,14 +22,7 @@ namespace T1
         /// <summary>
         /// count
         /// </summary>
-        public int count { get; set; }
-        /// <summary>
-        /// Rechner mit standartegrösse
-        /// </summary>
-        public TrainingCalc()
-        {
-            Zeiten = new double[standartsize];
-        }
+        public int count { get; private set; }
         /// <summary>
         /// rechner mit eigener grösse
         /// </summary>
@@ -44,6 +37,14 @@ namespace T1
             {
                 Zeiten = new double[standartsize];
             }
+            count = 0;
+        }
+        /// <summary>
+        /// Rechner mit standartegrösse
+        /// </summary>
+        public TrainingCalc()
+            :this(0)
+        {
         }
         /// <summary>
         /// neue zeit
@@ -51,29 +52,32 @@ namespace T1
         /// <param name="zeit">zeit</param>
         public void add(double zeit)
         {
-            try
-            {
-            double[] temp = new double[count];
-            if (count >= Zeiten.Length)
-            {
-                for (int i = 0; i < Zeiten.Length; i++)
-                {
-                    temp[i] = Zeiten[i];
-                }
-                Zeiten = new double[count];
-                for (int i = 0; i < Zeiten.Length; i++)
-                {
-                    Zeiten[i] = temp[i];
-                }
-            }
+            grow();
             Zeiten[count] = zeit;
             count++;
+            //try
+            //{
+            //double[] temp = new double[count];
+            //if (count >= Zeiten.Length)
+            //{
+            //    for (int i = 0; i < Zeiten.Length; i++)
+            //    {
+            //        temp[i] = Zeiten[i];
+            //    }
+            //    Zeiten = new double[count];
+            //    for (int i = 0; i < Zeiten.Length; i++)
+            //    {
+            //        Zeiten[i] = temp[i];
+            //    }
+            //}
+            //Zeiten[count] = zeit;
+            //count++;
 
-            }
-            catch
-            {
-                throw new Exception();
-            }
+            //}
+            //catch
+            //{
+            //    throw new Exception();
+            //}
         }
         /// <summary>
         /// Minimum erhalten
@@ -114,7 +118,7 @@ namespace T1
         public double getAvg()
         {
             double m = getSum();
-            return m / Zeiten.Length;
+            return m / count; // Bei .Lenght wird mit leeren gerehnet.
         }
         /// <summary>
         /// Summer erhalten
@@ -130,7 +134,23 @@ namespace T1
             return m;
         }
         
-
+        public void grow()
+        {
+            if (Zeiten.Length > count)
+            {
+                return;
+            }
+            else
+            {
+                int newlwnght = Zeiten.Length * 2;
+                double[] newItems = new double[newlwnght];
+                for (int i = 0; i < count; i++)
+                {
+                    newItems[i] = Zeiten[i];
+                }
+                Zeiten = newItems;
+            }
+        }
         
 
     }
