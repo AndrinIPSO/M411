@@ -49,5 +49,19 @@ namespace LinkedList
                 //curr.Next = n;
             }
         }
+
+        public bool contains(object item)
+        {
+            Node curr = first;
+            while (curr.Next != null)
+            {
+                if (curr.Item == item)
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
     }
 }
