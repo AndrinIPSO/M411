@@ -52,16 +52,28 @@ namespace LinkedList
 
         public bool contains(object item)
         {
+            return find(item) != null;
+            //if (find(item) != null)
+            //    return true;
+            //else
+            //    return false;
+        }
+
+
+
+        private Node find(object item)
+        {
             Node curr = first;
             while (curr.Next != null)
             {
-                if (curr.Item == item)
+                if (curr.Item.Equals(item))
                 {
-                    return true;
+                    return curr;
                 }
 
             }
-            return false;
+            return null;
+
         }
     }
 }
