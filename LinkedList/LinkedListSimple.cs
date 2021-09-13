@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    public class LinkedListSimple
+    public class LinkedListSimple<T>
     {
         public int Count { get; set; }
         private sealed class Node
         {
-            public object Item { get; set; }
+            public T Item { get; set; }
             public Node Next { get; set; }
 
 
@@ -20,7 +20,7 @@ namespace LinkedList
 
             }
 
-            public Node(object it)
+            public Node(T it)
             {
                 Item = it;
             }
@@ -44,7 +44,7 @@ namespace LinkedList
             return s;
         }
 
-        public void Add(object item)
+        public void Add(T item)
         {
             Node n = new Node() {Item = item, Next = null};
             if (first == null)
@@ -68,7 +68,7 @@ namespace LinkedList
             Count++;
         }
 
-        public bool contains(object item)
+        public bool contains(T item)
         {
             return find(item) != null;
             //if (find(item) != null)
@@ -79,7 +79,7 @@ namespace LinkedList
 
 
 
-        private Node find(object item)
+        private Node find(T item)
         {
             Node curr = first;
             while (curr.Next != null)
@@ -93,7 +93,7 @@ namespace LinkedList
             return null;
         }
 
-        public bool Remove(object item)
+        public bool Remove(T item)
         {
             Node node = find(item);
 
@@ -125,7 +125,7 @@ namespace LinkedList
                 return true;
         }
 
-        private Node findPrevious(object item)
+        private Node findPrevious(T item)
         {
             Node curr = first;
             Node prev = null;
@@ -152,6 +152,11 @@ namespace LinkedList
                 node = node.Next;
             }
             return node.Item;
+        }
+
+        public void Clear()
+        {
+            first = null;
         }
     }
 }

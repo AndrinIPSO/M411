@@ -10,7 +10,7 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            LinkedListSimple listSimple = new LinkedListSimple();
+            LinkedListSimple<string> listSimple = new LinkedListSimple<string>();
             listSimple.Add("tim");
             listSimple.Add("tom");
             listSimple.Add("vodidude");
