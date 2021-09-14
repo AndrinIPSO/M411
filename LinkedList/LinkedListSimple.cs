@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    public class LinkedListSimple<T>
+    public class LinkedListSimple<T> 
     {
         public int Count { get; set; }
         private sealed class Node
@@ -140,7 +140,7 @@ namespace LinkedList
             }
             return null;
         }
-        public Object FindByIndex(int index)
+        public T FindByIndex(int index)
         {
             Node node = first;
             for (int i = 1; i < index; i++)

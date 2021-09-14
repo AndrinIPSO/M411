@@ -22,6 +22,7 @@ namespace LinkedList
             Console.WriteLine(listSimple.ToString());
 
             Console.ReadLine();
+            
 
         }
     }
